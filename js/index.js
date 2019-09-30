@@ -119,3 +119,26 @@ contactParagraph.forEach(
 
 let footer = document.getElementsByTagName('footer');
 footer[0].textContent = siteContent['footer']['copyright'];
+
+// green nav  bar
+
+const greenNavBar = document.querySelectorAll('a');
+greenNavBar.forEach(element => {
+  element.style.color = 'green';
+});
+
+//  append
+
+const addToNav = document.createElement('nav24');
+addToNav.textContent = 'Web24';
+
+const endContents = document.querySelector('nav');
+endContents.append(addToNav);
+
+//  prepend
+
+const addToNav2 = document.createElement('navMel');
+addToNav2.textContent = 'Mel';
+
+const frontContent = document.querySelector('nav');
+frontContent.prepend(addToNav2);
