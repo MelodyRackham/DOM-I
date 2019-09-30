@@ -59,7 +59,8 @@ navBar[5].textContent = siteContent['nav']['nav-item-6'];
 let mainHeader = document.getElementsByTagName('h1');
 mainHeader[0].textContent = siteContent['cta']['h1'];
 
-// document.getElementsByTagName('h1').innerHTML = 'DOM <br> IS <br> AWESOME';
+mainHeader[0].setAttribute('style', 'white-space: pre;');
+mainHeader[0].textContent = siteContent['cta']['h1'].split(' ').join('\n');
 
 let roundPic = document.getElementById('cta-img');
 roundPic.setAttribute('src', siteContent['cta']['img-src']);
@@ -103,3 +104,18 @@ bottom.getElementsByClassName('text-content')[1].querySelector('p').textContent 
 
 bottom.getElementsByClassName('text-content')[2].querySelector('p').textContent =
   siteContent['main-content']['vision-content'];
+
+//contact section
+let contactSection = document.querySelector('.contact');
+contactSection.querySelector('h4').textContent = siteContent['contact']['contact-h4'];
+
+let contactArray = ['address', 'phone', 'email'];
+
+let contactParagraph = document.querySelectorAll('.contact p');
+contactParagraph.forEach(
+  (currentValue, index) => (currentValue.textContent = siteContent.contact[`${contactArray[index]}`]),
+);
+//footer
+
+let footer = document.getElementsByTagName('footer');
+footer[0].textContent = siteContent['footer']['copyright'];
