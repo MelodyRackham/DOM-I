@@ -142,3 +142,15 @@ addToNav2.textContent = 'Mel';
 
 const frontContent = document.querySelector('nav');
 frontContent.prepend(addToNav2);
+
+//stretch
+
+const purpleParagraphs = document.querySelectorAll('p');
+purpleParagraphs.forEach(element => {
+  element.style.color = 'purple';
+});
+
+const greenHeaders = document.querySelectorAll('h4');
+greenHeaders.forEach(element => {
+  element.style.color = 'green';
+});
